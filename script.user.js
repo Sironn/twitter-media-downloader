@@ -9,7 +9,7 @@
 // @description:zh-TW  一鍵下載 Twitter/X 圖片和影片，支援自訂檔名與下載歷史紀錄。
 // @author      ShanksSU
 // @namespace    https://github.com/ShanksSU/twitter-media-downloader
-// @version     0.3.5
+// @version     0.3.6
 // @match       https://twitter.com/*
 // @match       https://x.com/*
 // @icon        https://www.google.com/s2/favicons?sz=64&domain=x.com
@@ -29,10 +29,10 @@ class Config {
     static AUTH_TOKEN = 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA';
     static defaultFilename = '{user-id} [{date-time-local}] {status-id}_{index}';
     static language = {
-        en: { download: 'Download', completed: 'Download Completed', settings: 'Settings', history: 'Download Log', empty: 'No history yet', unknown_date: 'Unknown Date', saved: 'Saved', dialog: { title: 'Download Settings', save: 'Save', save_history: 'Remember download history', auto_bookmark: 'Auto Bookmark on Download', enable_shortcut: 'Enable Keyboard Shortcut', clear_history: 'Clear All History', clear_confirm: 'Clear all download history?', pattern: 'File Name Pattern', preview: 'Preview:', empty_pattern: 'Pattern cannot be empty.', reset: '(Reset)', custom_mode: '(Custom Mode)', tag_mode: '(Tag Mode)', shortcut: 'Keyboard Shortcut:', tags: { '{user-name}': 'User Name', '{user-id}': 'User ID', '{status-id}': 'Tweet ID', '{date-time-utc}': 'Time (UTC)', '{date-time-local}': 'Time (Local)', '{full-text}': 'Full Text', '{fav-count}': 'Likes', '{file-type}': 'Media Type', '{file-name}': 'Original Filename', '{media-count}': 'Media Count', '{index}': 'Index', '{rt-user-name}': 'RT User Name', '{rt-user-id}': 'RT User ID' } }, table: { thumb: 'Thumb', user: 'User', type: 'Type', size: 'Size', postTime: 'Post Time', downTime: 'Download Time', action: 'Action', go: 'Go', del: 'Delete' }, queue: { title: 'Downloads', thumb: 'Thumb', user: 'User', type: 'Type', size: 'Size', progress: 'Progress', status: 'Status', action: 'Action', waiting: 'Waiting', downloading: 'Downloading', done: 'Done', failed: 'Failed', paused: 'Paused', pause: 'Pause', resume: 'Resume', remove: 'Delete', clear_done: 'Clear Finished', clear_confirm_done: 'Remove all finished tasks?' } },
-        ja: { download: 'ダウンロード', completed: 'ダウンロード完了', settings: '設定', history: 'ダウンロード履歴', empty: '履歴はありません', unknown_date: '日付不明', saved: '保存しました', dialog: { title: 'ダウンロード設定', save: '保存', save_history: 'ダウンロード履歴を保存する', auto_bookmark: 'ダウンロード時に自動ブックマーク', enable_shortcut: 'キーボードショートカットを有効にする', clear_history: '履歴をクリア', clear_confirm: 'ダウンロード履歴を削除する？', pattern: 'ファイル名パターン', preview: 'プレビュー:', empty_pattern: 'パターンは空にできません。', reset: '(リセット)', custom_mode: '(カスタム)', tag_mode: '(タグモード)', shortcut: 'ショートカットキー:', tags: { '{user-name}': 'ユーザー名', '{user-id}': 'ユーザーID', '{status-id}': 'ツイートID', '{date-time-utc}': '時間（UTC）', '{date-time-local}': '時間（ローカル）', '{full-text}': 'ツイート本文', '{fav-count}': 'いいね数', '{file-type}': 'メディア種類', '{file-name}': '元のファイル名', '{media-count}': 'メディア数', '{index}': 'インデックス', '{rt-user-name}': 'RT ユーザー名', '{rt-user-id}': 'RT ユーザーID' } }, table: { thumb: 'サムネ', user: 'ユーザー', type: '種類', size: 'サイズ', postTime: '投稿時間', downTime: '保存時間', action: 'アクション', go: '開く', del: '削除' }, queue: { title: 'ダウンロード', thumb: 'サムネ', user: 'ユーザー', type: '種類', size: 'サイズ', progress: '進捗', status: '状態', action: 'アクション', waiting: '待機中', downloading: 'ダウンロード中', done: '完了', failed: '失敗', paused: '一時停止', pause: '一時停止', resume: '再開', remove: '削除', clear_done: '完了分をクリア', clear_confirm_done: '完了したタスクを削除する？' } },
-        zh: { download: '下载', completed: '下载完成', settings: '设置', history: '下载记录', empty: '暂无记录', unknown_date: '未知时间', saved: '已保存', dialog: { title: '下载设置', save: '保存', save_history: '保存下载记录', auto_bookmark: '下载时自动加入书签', enable_shortcut: '启用快捷键', clear_history: '(清除)', clear_confirm: '确认要清除下载记录？', pattern: '文件名格式', preview: '预览:', empty_pattern: '文件名格式不能为空。', reset: '(重置)', custom_mode: '(自订模式)', tag_mode: '(标签模式)', shortcut: '快捷键设定:', tags: { '{user-name}': '用户名称', '{user-id}': '用户账号', '{status-id}': '推文 ID', '{date-time-utc}': '时间（UTC）', '{date-time-local}': '时间（本地）', '{full-text}': '推文內文', '{fav-count}': '点赞数', '{file-type}': '媒体类型', '{file-name}': '原始文件名', '{media-count}': '媒体总数', '{index}': '序号', '{rt-user-name}': '转帖者名称', '{rt-user-id}': '转帖者账号' } }, table: { thumb: '缩图', user: '用户', type: '类型', size: '大小', postTime: '贴文时间', downTime: '下载时间', action: '动作', go: '前往', del: '删除' }, queue: { title: '下载任务', thumb: '缩图', user: '用户', type: '类型', size: '大小', progress: '进度', status: '状态', action: '动作', waiting: '等待中', downloading: '下载中', done: '已完成', failed: '失败', paused: '已暂停', pause: '暂停', resume: '继续', remove: '删除', clear_done: '清除已完成', clear_confirm_done: '确认移除所有已完成任务？' } },
-        'zh-Hant': { download: '下載', completed: '下載完成', settings: '設置', history: '下載紀錄', empty: '暫無紀錄', unknown_date: '未知時間', saved: '已保存', dialog: { title: '下載設置', save: '保存', save_history: '保存下載記錄', auto_bookmark: '下載時自動加入書籤', enable_shortcut: '啟用快捷鍵', clear_history: '(清除)', clear_confirm: '確認要清除下載記錄？', pattern: '文件名規則', preview: '預覽:', empty_pattern: '文件名規則不能為空。', reset: '(重置)', custom_mode: '(自訂模式)', tag_mode: '(標籤模式)', shortcut: '快捷鍵設定:', tags: { '{user-name}': '使用者名稱', '{user-id}': '使用者帳號', '{status-id}': '推文 ID', '{date-time-utc}': '時間（UTC）', '{date-time-local}': '時間（本地）', '{full-text}': '推文內文', '{fav-count}': '喜歡數量', '{file-type}': '媒體類型', '{file-name}': '原始檔名', '{media-count}': '媒體總數', '{index}': '排序序號', '{rt-user-name}': 'RT User Name', '{rt-user-id}': 'RT User ID' } }, table: { thumb: '縮圖', user: '用戶', type: '類型', size: '大小', postTime: '貼文時間', downTime: '下載時間', action: '動作', go: '前往', del: '刪除' }, queue: { title: '下載任務', thumb: '縮圖', user: '用戶', type: '類型', size: '大小', progress: '進度', status: '狀態', action: '動作', waiting: '等待中', downloading: '下載中', done: '已完成', failed: '失敗', paused: '已暫停', pause: '暫停', resume: '繼續', remove: '刪除', clear_done: '清除已完成', clear_confirm_done: '確認移除所有已完成任務？' } }
+        en: { download: 'Download', loading: 'Downloading', completed: 'Download Completed', settings: 'Settings', history: 'Download Log', empty: 'No history yet', unknown_date: 'Unknown Date', saved: 'Saved', dialog: { title: 'Download Settings', save: 'Save', save_history: 'Remember download history', auto_bookmark: 'Auto Bookmark on Download', enable_shortcut: 'Enable Keyboard Shortcut', clear_history: 'Clear All History', clear_confirm: 'Clear all download history?', pattern: 'File Name Pattern', preview: 'Preview:', empty_pattern: 'Pattern cannot be empty.', reset: '(Reset)', custom_mode: '(Custom Mode)', tag_mode: '(Tag Mode)', shortcut: 'Keyboard Shortcut:', tags: { '{user-name}': 'User Name', '{user-id}': 'User ID', '{status-id}': 'Tweet ID', '{date-time-utc}': 'Time (UTC)', '{date-time-local}': 'Time (Local)', '{full-text}': 'Full Text', '{fav-count}': 'Likes', '{file-type}': 'Media Type', '{file-name}': 'Original Filename', '{media-count}': 'Media Count', '{index}': 'Index', '{rt-user-name}': 'RT User Name', '{rt-user-id}': 'RT User ID' } }, table: { thumb: 'Thumb', user: 'User', type: 'Type', size: 'Size', postTime: 'Post Time', downTime: 'Download Time', action: 'Action', go: 'Go', del: 'Delete' }, queue: { title: 'Downloads', thumb: 'Thumb', user: 'User', type: 'Type', size: 'Size', progress: 'Progress', status: 'Status', action: 'Action', waiting: 'Waiting', connecting: 'Connecting', downloading: 'Downloading', done: 'Done', failed: 'Failed', paused: 'Paused', pause: 'Pause', resume: 'Resume', retry: 'Retry', remove: 'Delete', clear_done: 'Clear Finished', clear_confirm_done: 'Remove all finished tasks?' } },
+        ja: { download: 'ダウンロード', loading: 'ダウンロード中', completed: 'ダウンロード完了', settings: '設定', history: 'ダウンロード履歴', empty: '履歴はありません', unknown_date: '日付不明', saved: '保存しました', dialog: { title: 'ダウンロード設定', save: '保存', save_history: 'ダウンロード履歴を保存する', auto_bookmark: 'ダウンロード時に自動ブックマーク', enable_shortcut: 'キーボードショートカットを有効にする', clear_history: '履歴をクリア', clear_confirm: 'ダウンロード履歴を削除する？', pattern: 'ファイル名パターン', preview: 'プレビュー:', empty_pattern: 'パターンは空にできません。', reset: '(リセット)', custom_mode: '(カスタム)', tag_mode: '(タグモード)', shortcut: 'ショートカットキー:', tags: { '{user-name}': 'ユーザー名', '{user-id}': 'ユーザーID', '{status-id}': 'ツイートID', '{date-time-utc}': '時間（UTC）', '{date-time-local}': '時間（ローカル）', '{full-text}': 'ツイート本文', '{fav-count}': 'いいね数', '{file-type}': 'メディア種類', '{file-name}': '元のファイル名', '{media-count}': 'メディア数', '{index}': 'インデックス', '{rt-user-name}': 'RT ユーザー名', '{rt-user-id}': 'RT ユーザーID' } }, table: { thumb: 'サムネ', user: 'ユーザー', type: '種類', size: 'サイズ', postTime: '投稿時間', downTime: '保存時間', action: 'アクション', go: '開く', del: '削除' }, queue: { title: 'ダウンロード', thumb: 'サムネ', user: 'ユーザー', type: '種類', size: 'サイズ', progress: '進捗', status: '状態', action: 'アクション', waiting: '待機中', connecting: '接続中', downloading: 'ダウンロード中', done: '完了', failed: '失敗', paused: '一時停止', pause: '一時停止', resume: '再開', retry: 'リトライ', remove: '削除', clear_done: '完了分をクリア', clear_confirm_done: '完了したタスクを削除する？' } },
+        zh: { download: '下载', loading: '下载中', completed: '下载完成', settings: '设置', history: '下载记录', empty: '暂无记录', unknown_date: '未知时间', saved: '已保存', dialog: { title: '下载设置', save: '保存', save_history: '保存下载记录', auto_bookmark: '下载时自动加入书签', enable_shortcut: '启用快捷键', clear_history: '(清除)', clear_confirm: '确认要清除下载记录？', pattern: '文件名格式', preview: '预览:', empty_pattern: '文件名格式不能为空。', reset: '(重置)', custom_mode: '(自订模式)', tag_mode: '(标签模式)', shortcut: '快捷键设定:', tags: { '{user-name}': '用户名称', '{user-id}': '用户账号', '{status-id}': '推文 ID', '{date-time-utc}': '时间（UTC）', '{date-time-local}': '时间（本地）', '{full-text}': '推文內文', '{fav-count}': '点赞数', '{file-type}': '媒体类型', '{file-name}': '原始文件名', '{media-count}': '媒体总数', '{index}': '序号', '{rt-user-name}': '转帖者名称', '{rt-user-id}': '转帖者账号' } }, table: { thumb: '缩图', user: '用户', type: '类型', size: '大小', postTime: '贴文时间', downTime: '下载时间', action: '动作', go: '前往', del: '删除' }, queue: { title: '下载任务', thumb: '缩图', user: '用户', type: '类型', size: '大小', progress: '进度', status: '状态', action: '动作', waiting: '等待中', connecting: '连接中', downloading: '下载中', done: '已完成', failed: '失败', paused: '已暂停', pause: '暂停', resume: '继续', retry: '重试', remove: '删除', clear_done: '清除已完成', clear_confirm_done: '确认移除所有已完成任务？' } },
+        'zh-Hant': { download: '下載', loading: '下載中', completed: '下載完成', settings: '設置', history: '下載紀錄', empty: '暫無紀錄', unknown_date: '未知時間', saved: '已保存', dialog: { title: '下載設置', save: '保存', save_history: '保存下載記錄', auto_bookmark: '下載時自動加入書籤', enable_shortcut: '啟用快捷鍵', clear_history: '(清除)', clear_confirm: '確認要清除下載記錄？', pattern: '文件名規則', preview: '預覽:', empty_pattern: '文件名規則不能為空。', reset: '(重置)', custom_mode: '(自訂模式)', tag_mode: '(標籤模式)', shortcut: '快捷鍵設定:', tags: { '{user-name}': '使用者名稱', '{user-id}': '使用者帳號', '{status-id}': '推文 ID', '{date-time-utc}': '時間（UTC）', '{date-time-local}': '時間（本地）', '{full-text}': '推文內文', '{fav-count}': '喜歡數量', '{file-type}': '媒體類型', '{file-name}': '原始檔名', '{media-count}': '媒體總數', '{index}': '排序序號', '{rt-user-name}': 'RT User Name', '{rt-user-id}': 'RT User ID' } }, table: { thumb: '縮圖', user: '用戶', type: '類型', size: '大小', postTime: '貼文時間', downTime: '下載時間', action: '動作', go: '前往', del: '刪除' }, queue: { title: '下載任務', thumb: '縮圖', user: '用戶', type: '類型', size: '大小', progress: '進度', status: '狀態', action: '動作', waiting: '等待中', connecting: '連接中', downloading: '下載中', done: '已完成', failed: '失敗', paused: '已暫停', pause: '暫停', resume: '繼續', retry: '重試', remove: '刪除', clear_done: '清除已完成', clear_confirm_done: '確認移除所有已完成任務？' } }
     };
 
     static logIconUri = `data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cline x1='16' y1='13' x2='8' y2='13'%3E%3C/line%3E%3Cline x1='16' y1='17' x2='8' y2='17'%3E%3C/line%3E%3Cpolyline points='10 9 9 9 8 9'%3E%3C/polyline%3E%3C/svg%3E`;
@@ -123,10 +123,10 @@ class Config {
         .tmd-modal-content {overflow-y: auto; flex: 1; min-height: 0; padding: 0;}
         .tmd-modal-settings {padding: 20px; overflow-y: auto; flex: 1; min-height: 0;}
         .tmd-empty-text {text-align: center; color: #536471; margin: 0; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100%; box-sizing: border-box;}
-        .tmd-modal-content::-webkit-scrollbar, .tmd-table-wrapper::-webkit-scrollbar {width: 8px; height: 8px;}
-        .tmd-modal-content::-webkit-scrollbar-track, .tmd-table-wrapper::-webkit-scrollbar-track {background: #ffffff; border-radius: 4px;}
-        .tmd-modal-content::-webkit-scrollbar-thumb, .tmd-table-wrapper::-webkit-scrollbar-thumb {background: #cccccc; border-radius: 4px;}
-        .tmd-modal-content::-webkit-scrollbar-thumb:hover, .tmd-table-wrapper::-webkit-scrollbar-thumb:hover {background: #b3b3b3;}
+        .tmd-modal-content::-webkit-scrollbar {width: 8px; height: 8px;}
+        .tmd-modal-content::-webkit-scrollbar-track {background: #ffffff; border-radius: 4px;}
+        .tmd-modal-content::-webkit-scrollbar-thumb {background: #cccccc; border-radius: 4px;}
+        .tmd-modal-content::-webkit-scrollbar-thumb:hover {background: #b3b3b3;}
         select.tmd-lang-select { background: #fff; color: #0f1419; border: 1px solid #cfd9de; border-radius: 4px; padding: 4px; font-size: 13px; outline: none; cursor: pointer; font-weight: bold; transition: 0.2s; }
         .tmd-dark-theme { background-color: #15202b; color: #fff; border: 1px solid #38444d; box-shadow: 0 4px 12px rgba(255,255,255,0.05); }
         .tmd-dark-theme .tmd-modal-header { background: #1e2732; border-bottom: 1px solid #38444d; }
@@ -145,44 +145,35 @@ class Config {
         .tmd-dark-theme .tmd-tag-btn:hover { background: #2c3640; color: #1d9bf0; border-color: #1d9bf0; }
         .tmd-dark-theme .tmd-preview-box { background: #1e2732; border-color: #38444d; color: #fff; }
         .tmd-dark-theme select.tmd-lang-select { background: #1e2732; color: #fff; border-color: #38444d; }
-        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-track, .tmd-dark-theme .tmd-table-wrapper::-webkit-scrollbar-track {background: #15202b;}
-        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-thumb, .tmd-dark-theme .tmd-table-wrapper::-webkit-scrollbar-thumb {background: #38444d;}
-        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-thumb:hover, .tmd-dark-theme .tmd-table-wrapper::-webkit-scrollbar-thumb:hover {background: #8899a6;}
+        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-track {background: #15202b;}
+        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-thumb {background: #38444d;}
+        .tmd-dark-theme .tmd-modal-content::-webkit-scrollbar-thumb:hover {background: #8899a6;}
     `;
 
     static history_log_css = `
-        .tmd-history-btn {position: fixed; left: 16px; bottom: 16px; color: #000; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 4px; display: flex; align-items: center; cursor: pointer; z-index: 9999; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: 0.2s;}
+        .tmd-history-btn {position: fixed; left: 16px; bottom: 16px; color: #000; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 4px; display: flex; align-items: center; cursor: pointer; z-index: 9999; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: 0.2s; touch-action: none;}
         .tmd-history-btn:hover {background: #f0f0f0;}
+        .tmd-history-btn.tmd-dragging {transition: none; cursor: grabbing; user-select: none;}
         .tmd-history-btn.tmd-dark-theme {background: #15202b; color: #fff; border-color: #38444d;}
         .tmd-history-btn.tmd-dark-theme:hover {background: #1e2732;}
         .tmd-history-btn label {display: inline-flex; align-items: center; margin: 0 8px; cursor: pointer; font-family: monospace; font-size: 14px;}
 
-        .tmd-table-wrapper { width: 100%; overflow-x: auto; }
-        .tmd-table { width: max-content; min-width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; font-family: sans-serif; white-space: nowrap; }
+        .tmd-table { width: 100%; table-layout: fixed; border-collapse: collapse; text-align: center; font-size: 13px; font-family: sans-serif; white-space: nowrap; }
         .tmd-table th, .tmd-table td { border-bottom: 1px solid #eff3f4; vertical-align: middle; }
-
-        .tmd-table td {
-            padding: 10px 15px;
-            max-width: 10px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .tmd-table td:last-child { max-width: none; overflow: visible; }
+        .tmd-table td { padding: 10px 12px; overflow: hidden; text-overflow: ellipsis; }
+        .tmd-table td:last-child { overflow: visible; }
         .tmd-table th { background: #f7f9f9; color: #536471; position: sticky; top: 0; z-index: 10; font-weight: bold; box-shadow: 0 1px 0 #eff3f4; padding: 0; }
-        .tmd-table th:nth-child(1) .tmd-th-inner { width: 65px; }
-        .tmd-table th:nth-child(2) .tmd-th-inner { width: 140px; }
-        .tmd-table th:nth-child(3) .tmd-th-inner { width: 70px; }
-        .tmd-table th:nth-child(4) .tmd-th-inner { width: 90px; }
-        .tmd-table th:nth-child(5) .tmd-th-inner { width: 130px; }
-        .tmd-table th:nth-child(6) .tmd-th-inner { width: 130px; }
-        .tmd-table th:nth-child(7) .tmd-th-inner { width: 120px; resize: none; }
-
-        .tmd-th-inner { resize: horizontal; overflow: hidden; padding: 10px 15px; min-width: 40px; display: block; box-sizing: border-box; }
+        .tmd-table th:nth-child(1) { width: 9.9%; }
+        .tmd-table th:nth-child(2) { width: 17%; }
+        .tmd-table th:nth-child(3) { width: 9.5%; }
+        .tmd-table th:nth-child(4) { width: 9.5%; }
+        .tmd-table th:nth-child(5) { width: 18.1%; }
+        .tmd-table th:nth-child(6) { width: 18.1%; }
+        .tmd-table th:nth-child(7) { width: 17.9%; }
+        .tmd-th-inner { padding: 10px 12px; overflow: hidden; text-overflow: ellipsis; }
         .tmd-table tbody tr:hover { background: #f7f9f9; }
-        .tmd-thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; background: #eee; display: block; }
-        .tmd-action-btn { background: #eff3f4; border: 1px solid #cfd9de; padding: 6px 12px; border-radius: 99px; cursor: pointer; color: #0f1419; font-size: 12px; margin-right: 6px; font-weight: bold; transition: 0.2s; }
+        .tmd-thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; background: #eee; display: block; margin: 0 auto; }
+        .tmd-action-btn { background: #eff3f4; border: 1px solid #cfd9de; padding: 6px 12px; border-radius: 99px; cursor: pointer; color: #0f1419; font-size: 12px; margin: 0 3px; font-weight: bold; transition: 0.2s; }
         .tmd-action-btn:hover { background: #e1e8ed; }
         .tmd-action-btn.del { color: #f4212e; border-color: #fcaeb4; background: #fff; }
         .tmd-action-btn.del:hover { background: #fce8e8; }
@@ -194,17 +185,15 @@ class Config {
         .tmd-history-btn.tmd-dark-theme.tmd-busy {border-color: #1d9bf0;}
         .tmd-history-btn.tmd-dark-theme.tmd-busy label {color: #1d9bf0;}
 
-        .tmd-queue-table th:nth-child(1) .tmd-th-inner {width: 65px;}
-        .tmd-queue-table th:nth-child(2) .tmd-th-inner {width: 140px;}
-        .tmd-queue-table th:nth-child(3) .tmd-th-inner {width: 70px;}
-        .tmd-queue-table th:nth-child(4) .tmd-th-inner {width: 90px;}
-        .tmd-queue-table th:nth-child(5) .tmd-th-inner {width: 150px;}
-        .tmd-queue-table th:nth-child(6) .tmd-th-inner {width: 130px;}
-        .tmd-queue-table th:nth-child(7) .tmd-th-inner {width: 120px; resize: none;}
+        .tmd-queue-table th:nth-child(2) {width: 20%;}
+        .tmd-queue-table th:nth-child(3) {width: 11.4%;}
+        .tmd-queue-table th:nth-child(4) {width: 12.3%;}
+        .tmd-queue-table th:nth-child(5) {width: 19%;}
+        .tmd-queue-table th:nth-child(6) {width: 9.5%;}
 
-        .tmd-q-user, .tmd-q-type {display: inline-block; max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;}
-        .tmd-q-type {max-width: 70px; text-transform: lowercase;}
-        .tmd-q-acts {display: flex; align-items: center;}
+        .tmd-q-user, .tmd-q-type {display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;}
+        .tmd-q-type {text-transform: lowercase;}
+        .tmd-q-acts {display: flex; align-items: center; justify-content: center;}
         .tmd-queue-table .tmd-action-btn[disabled] {opacity: 0.45; cursor: default; background: #eff3f4;}
         .tmd-queue-table .tmd-action-btn.del[disabled] {background: #fff;}
 
@@ -214,7 +203,7 @@ class Config {
         .tmd-q-fill.tmd-q-failed {background: #f4212e;}
         .tmd-q-pct {color: #536471;}
         .tmd-q-state.waiting {color: #536471;}
-        .tmd-q-state.downloading {color: #1d9bf0;}
+        .tmd-q-state.connecting, .tmd-q-state.downloading {color: #1d9bf0;}
         .tmd-q-state.done {color: #00ba7c;}
         .tmd-q-state.failed {color: #f4212e;}
         .tmd-q-state.paused {color: #b8860b;}
@@ -267,20 +256,20 @@ class Config {
 
     static svg = `
         <g class="download">
-            <path d="M7 11l5 5 5-5M12 4v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M7 11l5 5 5-5M12 4v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </g>
         <g class="completed">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="8 11 11 14 17 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="8 11 11 14 17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
         <g class="loading">
             <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" opacity="0.3"/>
-            <path d="M12 2a10 10 0 0 1 10 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M12 2a10 10 0 0 1 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </g>
         <g class="failed">
             <circle cx="12" cy="12" r="11" fill="#f33" stroke="currentColor" stroke-width="2" opacity="0.8"/>
-            <path d="M14.5 7.5l-5 9M9.5 7.5l5 9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M14.5 7.5l-5 9M9.5 7.5l5 9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
         </g>
     `;
 
@@ -342,6 +331,7 @@ class StorageManager {
         this.shortcutKey = 'D';
         this.theme = 'light';
         this.lang = 'auto';
+        this.historyBtnPos = null;
     }
 
     async init() {
@@ -354,6 +344,12 @@ class StorageManager {
         this.shortcutKey = await GM_getValue('shortcut_key', 'D');
         this.theme = await GM_getValue('tmd_theme', 'light');
         this.lang = await GM_getValue('tmd_lang', 'auto');
+        this.historyBtnPos = await GM_getValue('history_btn_pos', null);
+    }
+
+    async setHistoryBtnPos(pos) {
+        this.historyBtnPos = pos;
+        await GM_setValue('history_btn_pos', pos);
     }
 
     async setSetting(key, value) {
@@ -460,7 +456,7 @@ class TwitterAPI {
 class DownloadQueue {
     constructor() {
         this.tasks = [];
-        this.thread = 0;
+        this.active = new Set();
         this.max_thread = 2;
 
         this.records = [];
@@ -504,36 +500,6 @@ class DownloadQueue {
         task.__rid = id;
         this.taskIndex.set(id, task);
 
-        const self = this;
-        const find = () => self.records.find(r => r.id === id);
-        const origLoad = task.onload;
-        const origError = task.onerror;
-
-        task.onload = function () {
-            try {
-                const rec = find();
-                if (rec) {
-                    rec.state = 'done';
-                    if (rec.total > 0) rec.loaded = rec.total;
-                    self.notify();
-                }
-            } catch (e) { console.error('[TMD] Record update error:', e); }
-
-            return origLoad && origLoad.apply(this, arguments);
-        };
-
-        task.onerror = function () {
-            try {
-                const rec = find();
-                if (rec) {
-                    rec.state = 'failed';
-                    self.notify();
-                }
-            } catch (e) { console.error('[TMD] Record update error:', e); }
-
-            return origError && origError.apply(this, arguments);
-        };
-
         this.notify();
     }
 
@@ -548,17 +514,36 @@ class DownloadQueue {
             rec.loaded = e.loaded;
         }
 
-        if (rec.state === 'waiting') rec.state = 'downloading';
+        if (rec.state === 'waiting' || rec.state === 'connecting') rec.state = 'downloading';
 
         this.notify();
     }
 
     activeCount() {
-        return this.records.filter(r => r.state === 'waiting' || r.state === 'downloading').length;
+        return this.records.filter(r => r.state === 'waiting' || r.state === 'connecting' || r.state === 'downloading').length;
     }
 
     clearFinished() {
+        const doneIds = this.records.filter(r => r.state === 'done').map(r => r.id);
+        if (doneIds.length === 0) return;
+
         this.records = this.records.filter(r => r.state !== 'done');
+        doneIds.forEach(id => this.taskIndex.delete(id));
+
+        this.notify();
+    }
+
+    setState(rid, state) {
+        const rec = this.records.find(r => r.id === rid);
+        if (!rec || rec.state === state) return;
+
+        rec.state = state;
+
+        const task = this.taskIndex.get(rid);
+        if (task && typeof task.onState === 'function') {
+            try { task.onState(state); } catch (e) { console.error('[TMD] onState handler error:', e); }
+        }
+
         this.notify();
     }
 
@@ -567,7 +552,7 @@ class DownloadQueue {
         const task = this.taskIndex.get(rid);
 
         if (!rec || !task) return;
-        if (rec.state !== 'waiting' && rec.state !== 'downloading') return;
+        if (rec.state !== 'waiting' && rec.state !== 'connecting' && rec.state !== 'downloading') return;
 
         task.__paused = true;
 
@@ -576,8 +561,7 @@ class DownloadQueue {
 
         if (typeof task.__cancel === 'function') task.__cancel();
 
-        rec.state = 'paused';
-        this.notify();
+        this.setState(rid, 'paused');
     }
 
     resume(rid) {
@@ -588,16 +572,25 @@ class DownloadQueue {
 
         task.__paused = false;
         task.retry = 0;
-        rec.state = 'waiting';
 
+        this.setState(rid, 'waiting');
         this.tasks.push(task);
+        this.pump();
+    }
 
-        if (this.thread < this.max_thread) {
-            this.thread++;
-            this.next();
-        }
+    retryFailed(rid) {
+        const rec = this.records.find(r => r.id === rid);
+        const task = this.taskIndex.get(rid);
 
-        this.notify();
+        if (!rec || !task || rec.state !== 'failed') return;
+
+        task.retry = 0;
+        rec.loaded = 0;
+        rec.total = 0;
+
+        this.setState(rid, 'waiting');
+        this.tasks.push(task);
+        this.pump();
     }
 
     remove(rid) {
@@ -621,120 +614,141 @@ class DownloadQueue {
         try { this.track(task); } catch (e) { console.error('[TMD] Track error:', e); }
 
         this.tasks.push(task);
-        if (this.thread < this.max_thread) {
-            this.thread++;
-            this.next();
+        this.pump();
+    }
+
+    pump() {
+        while (this.active.size < this.max_thread) {
+            const task = this.tasks.shift();
+            if (!task) break;
+
+            const rid = task.__rid;
+            if (rid == null) {
+                console.error('[TMD] Task without record:', task);
+                continue;
+            }
+
+            this.active.add(rid);
+            this.setState(rid, 'connecting');
+
+            this.start(task)
+                .catch(err => console.error('[TMD] Start error:', err))
+                .finally(() => {
+                    this.active.delete(rid);
+                    this.pump();
+                });
         }
     }
 
-    async next() {
-        if (this.tasks.length === 0) {
-            this.thread--;
-            return;
-        }
-        let task = this.tasks.shift();
-        await this.start(task);
-        this.next();
-    }
-
-    // start(task) {
-    //     return new Promise(resolve => {
-    //         GM_download({
-    //             url: task.url,
-    //             name: task.name,
-    //             onload: () => { task.onload(); resolve(); },
-    //             onerror: r => { task.onerror(r); this.retry(task); resolve(); },
-    //             ontimeout: r => { task.onerror(r); this.retry(task); resolve(); }
-    //         });
-    //     });
-    // }
     start(task) {
         return new Promise(resolve => {
-            let finished = false;
+            let settled = false;
 
-            task.__cancel = () => {
-                if (finished) return;
-                finished = true;
-
-                try { task.__req && task.__req.abort(); } catch (e) { }
-
+            const done = () => {
+                if (settled) return;
+                settled = true;
                 resolve();
             };
 
+            task.__cancel = () => {
+                if (settled) return;
+                try { task.__req && task.__req.abort(); } catch (e) { }
+                done();
+            };
+
             const fail = error => {
-                if (finished) return;
-                finished = true;
+                if (settled) return;
 
                 if (task.__paused || task.__removed) {
-                    resolve();
+                    done();
                     return;
                 }
 
                 console.error('[TMD] Download failed:', error);
-                task.onerror(error);
-                this.retry(task);
-                resolve();
+
+                if (this.retry(task)) {
+                    done();
+                    return;
+                }
+
+                this.setState(task.__rid, 'failed');
+                done();
             };
 
-            task.__req = GM_xmlhttpRequest({
-                method: 'GET',
-                url: task.url,
-                responseType: 'blob',
-                timeout: 120000,
+            try {
+                task.__req = GM_xmlhttpRequest({
+                    method: 'GET',
+                    url: task.url,
+                    responseType: 'blob',
+                    timeout: 120000,
 
-                onprogress: e => {
-                    try { this.onProgress(task, e); } catch (err) { console.error('[TMD] Progress error:', err); }
-                },
+                    onprogress: e => {
+                        try { this.onProgress(task, e); } catch (err) { console.error('[TMD] Progress error:', err); }
+                    },
 
-                onload: response => {
-                    if (
-                        response.status < 200 ||
-                        response.status >= 300 ||
-                        !(response.response instanceof Blob)
-                    ) {
-                        fail({
-                            error: 'blob_fetch_failed',
-                            status: response.status
-                        });
-                        return;
-                    }
+                    onload: response => {
+                        if (
+                            response.status < 200 ||
+                            response.status >= 300 ||
+                            !(response.response instanceof Blob)
+                        ) {
+                            fail({ error: 'blob_fetch_failed', status: response.status });
+                            return;
+                        }
 
-                    try {
-                        const blobUrl = URL.createObjectURL(response.response);
+                        try {
+                            const blobUrl = URL.createObjectURL(response.response);
 
-                        const link = document.createElement('a');
-                        link.href = blobUrl;
-                        link.download = task.name;
-                        link.style.display = 'none';
+                            const link = document.createElement('a');
+                            link.href = blobUrl;
+                            link.download = task.name;
+                            link.style.display = 'none';
 
-                        document.documentElement.appendChild(link);
-                        link.click();
-                        link.remove();
+                            document.documentElement.appendChild(link);
+                            link.click();
+                            link.remove();
 
-                        setTimeout(() => {
-                            URL.revokeObjectURL(blobUrl);
-                        }, 60000);
+                            setTimeout(() => {
+                                URL.revokeObjectURL(blobUrl);
+                            }, 60000);
 
-                        finished = true;
-                        task.onload();
-                        resolve();
-                    } catch (error) {
-                        fail(error);
-                    }
-                },
+                            const rec = this.records.find(r => r.id === task.__rid);
+                            if (rec && rec.total > 0) rec.loaded = rec.total;
 
-                onerror: fail,
-                ontimeout: fail
-            });
+                            this.setState(task.__rid, 'done');
+
+                            try {
+                                const ret = typeof task.onload === 'function' ? task.onload() : null;
+                                if (ret && typeof ret.catch === 'function') {
+                                    ret.catch(e => console.error('[TMD] onload async error:', e));
+                                }
+                            } catch (e) {
+                                console.error('[TMD] onload handler error:', e);
+                            }
+
+                            done();
+                        } catch (error) {
+                            fail(error);
+                        }
+                    },
+
+                    onerror: fail,
+                    ontimeout: fail,
+                    onabort: done
+                });
+            } catch (error) {
+                fail(error);
+            }
         });
     }
 
     retry(task) {
         task.retry = (task.retry || 0) + 1;
-        if (task.retry <= 2) {
-            this.max_thread = 1;
-            this.tasks.push(task);
-        }
+        if (task.retry > 2) return false;
+
+        this.tasks.push(task);
+        this.setState(task.__rid, 'waiting');
+        return true;
     }
 }
 
@@ -819,10 +833,77 @@ class UIManager {
 
         this.historyBtn.innerHTML =
             `<label>${this.app.queue.activeCount()}</label>`;
-        this.historyBtn.onclick = () => this.showModal('downloads');
         this.updateQueueBadge();
 
         document.body.appendChild(this.historyBtn);
+
+        let dragged = false;
+        let customPos = this.app.storage.historyBtnPos;
+
+        this.historyBtn.addEventListener('click', e => {
+            if (dragged) {
+                dragged = false;
+                e.preventDefault();
+                return;
+            }
+            this.showModal('downloads');
+        });
+
+        const clampPos = (x, y) => {
+            const rect = this.historyBtn.getBoundingClientRect();
+            const maxX = Math.max(0, document.documentElement.clientWidth - rect.width);
+            const maxY = Math.max(0, document.documentElement.clientHeight - rect.height);
+            return { x: Math.min(Math.max(0, x), maxX), y: Math.min(Math.max(0, y), maxY) };
+        };
+
+        const applyPos = (x, y) => {
+            const pos = clampPos(x, y);
+            this.historyBtn.style.left = `${pos.x}px`;
+            this.historyBtn.style.top = `${pos.y}px`;
+            this.historyBtn.style.bottom = 'auto';
+            return pos;
+        };
+
+        if (customPos && Number.isFinite(customPos.x) && Number.isFinite(customPos.y)) {
+            applyPos(customPos.x, customPos.y);
+        } else {
+            customPos = null;
+        }
+
+        let drag = null;
+
+        this.historyBtn.addEventListener('pointerdown', e => {
+            if (e.button !== 0) return;
+            dragged = false;
+            const rect = this.historyBtn.getBoundingClientRect();
+            drag = { x: e.clientX, y: e.clientY, left: rect.left, top: rect.top, started: false };
+            this.historyBtn.setPointerCapture(e.pointerId);
+        });
+
+        this.historyBtn.addEventListener('pointermove', e => {
+            if (!drag) return;
+            const dx = e.clientX - drag.x;
+            const dy = e.clientY - drag.y;
+            if (!drag.started && Math.hypot(dx, dy) < 3) return;
+            if (!drag.started) {
+                drag.started = true;
+                dragged = true;
+                this.historyBtn.classList.add('tmd-dragging');
+            }
+            customPos = applyPos(drag.left + dx, drag.top + dy);
+        });
+
+        const endDrag = () => {
+            if (!drag) return;
+            if (drag.started) {
+                this.historyBtn.classList.remove('tmd-dragging');
+                this.app.storage.setHistoryBtnPos(customPos);
+            }
+            drag = null;
+        };
+
+        this.historyBtn.addEventListener('pointerup', endDrag);
+        this.historyBtn.addEventListener('pointercancel', endDrag);
 
         let lastBottom = '';
 
@@ -888,6 +969,8 @@ class UIManager {
                 );
             }
 
+            if (customPos) return;
+
             const bottom =
                 `calc(16px + max(${bottomOffset}px, env(safe-area-inset-bottom, 0px)))`;
 
@@ -897,18 +980,20 @@ class UIManager {
             }
         };
 
-        window.addEventListener('resize', updatePosition);
-        window.visualViewport?.addEventListener('resize', updatePosition);
+        const onResize = () => {
+            if (customPos) applyPos(customPos.x, customPos.y);
+            updatePosition();
+        };
+
+        window.addEventListener('resize', onResize);
+        window.visualViewport?.addEventListener('resize', onResize);
 
         const positionTimer = window.setInterval(updatePosition, 250);
 
         this.historyPositionCleanup = () => {
             window.clearInterval(positionTimer);
-            window.removeEventListener('resize', updatePosition);
-            window.visualViewport?.removeEventListener(
-                'resize',
-                updatePosition
-            );
+            window.removeEventListener('resize', onResize);
+            window.visualViewport?.removeEventListener('resize', onResize);
         };
 
         updatePosition();
@@ -1270,7 +1355,7 @@ class UIManager {
         let backTarget = 'downloads';
 
         const buildDownloadTable = () => {
-            let wrapper = $element(downloadsContainer, 'div', 'tmd-table-wrapper');
+            let wrapper = $element(downloadsContainer, 'div');
             let table = $element(wrapper, 'table', 'tmd-table tmd-queue-table');
             let thead = $element(table, 'thead');
             let trHead = $element(thead, 'tr');
@@ -1321,7 +1406,8 @@ class UIManager {
             let delBtn = $element(acts, 'button', 'tmd-action-btn del', queueLang.remove || 'Delete');
 
             pauseBtn.onclick = () => {
-                if (rec.state === 'paused') this.app.queue.resume(rec.id);
+                if (rec.state === 'failed') this.app.queue.retryFailed(rec.id);
+                else if (rec.state === 'paused') this.app.queue.resume(rec.id);
                 else this.app.queue.pause(rec.id);
                 syncDownloads();
             };
@@ -1370,12 +1456,15 @@ class UIManager {
             row.stateEl.className = 'tmd-q-state ' + rec.state;
             row.stateEl.textContent = queueLang[rec.state] || rec.state;
 
-            const pausable = rec.state === 'waiting' || rec.state === 'downloading' || rec.state === 'paused';
+            const retryable = rec.state === 'failed';
+            const pausable = rec.state === 'waiting' || rec.state === 'connecting' || rec.state === 'downloading' || rec.state === 'paused';
 
-            row.pauseBtn.disabled = !pausable;
-            row.pauseBtn.textContent = rec.state === 'paused'
-                ? (queueLang.resume || 'Resume')
-                : (queueLang.pause || 'Pause');
+            row.pauseBtn.disabled = !retryable && !pausable;
+            row.pauseBtn.textContent = retryable
+                ? (queueLang.retry || 'Retry')
+                : (rec.state === 'paused'
+                    ? (queueLang.resume || 'Resume')
+                    : (queueLang.pause || 'Pause'));
         };
 
         const syncDownloads = () => {
@@ -1449,7 +1538,7 @@ class UIManager {
                 if (histLen === 0) {
                     $element(historyContainer, 'p', 'tmd-empty-text', this.lang.empty || 'Empty');
                 } else {
-                    let tableWrap = $element(historyContainer, 'div', 'tmd-table-wrapper');
+                    let tableWrap = $element(historyContainer, 'div');
                     let table = $element(tableWrap, 'table', 'tmd-table');
                     let thead = $element(table, 'thead');
                     let trHead = $element(thead, 'tr');
@@ -1596,7 +1685,7 @@ class UIManager {
 
                 btn_down.innerHTML = `<div><div><svg viewBox="0 0 24 24" style="width: 18px; height: 18px;">${Config.svg}</svg></div></div>`;
                 btn_down.classList.add('tmd-down', 'tmd-img');
-                this.setButtonStatus(btn_down, 'download');
+                this.setButtonStatus(btn_down, 'download', this.lang.download);
                 img.parentNode.appendChild(btn_down);
 
                 btn_down.onclick = e => {
@@ -1696,7 +1785,7 @@ class TwitterMediaDownloaderApp {
 
     async handleDownloadClick(btn, status_id, is_exist, index, retweeter_name = 'unknown', retweeter_id = 'unknown') {
         if (btn.classList.contains('loading')) return;
-        this.ui.setButtonStatus(btn, 'loading');
+        this.ui.setButtonStatus(btn, 'loading', this.ui.lang.loading);
 
         let out = this.storage.filenamePattern.split('\n').join('');
 
@@ -1740,7 +1829,7 @@ class TwitterMediaDownloaderApp {
         }
 
         if (medias.length > 0) {
-            let tasksLeft = medias.length;
+            let mediaDone = medias.map(() => false);
             let totalBytes = 0;
             let fetchSizePromises = [];
 
@@ -1751,7 +1840,7 @@ class TwitterMediaDownloaderApp {
                     : (mp4Variants.length > 0 ? mp4Variants.reduce((a, b) => (a.bitrate || 0) >= (b.bitrate || 0) ? a : b).url : media.video_info?.variants[0]?.url);
 
                 if (!info.url) {
-                    if (--tasksLeft === 0) this.ui.setButtonStatus(btn, 'failed', 'NO_URL');
+                    this.ui.setButtonStatus(btn, 'failed', 'NO_URL');
                     return;
                 }
 
@@ -1776,25 +1865,34 @@ class TwitterMediaDownloaderApp {
                     user: info['user-name'] || '',
                     type: info['file-type'] || '',
                     onload: async () => {
-                        if (--tasksLeft === 0) {
-                            this.ui.setButtonStatus(btn, 'completed', this.ui.lang.completed);
-                            if (this.storage.saveHistoryFlag && !is_exist) {
-                                await Promise.all(fetchSizePromises);
-                                let sizeStr = totalBytes > 0 ? (totalBytes / (1024 * 1024)).toFixed(2) + ' MB' : 'Unknown';
+                        mediaDone[i] = true;
+                        if (!mediaDone.every(Boolean)) return;
 
-                                await this.storage.addHistory({
-                                    id: status_id,
-                                    user: info['user-name'],
-                                    type: medias.length > 1 ? 'Gallery' : info['file-type'],
-                                    postTime: new Date(tweet.legacy.created_at).getTime(),
-                                    thumb: medias[0]?.media_url_https ? medias[0].media_url_https + ':small' : '',
-                                    size: sizeStr
-                                });
-                                this.ui.updateHistoryCount();
-                            }
+                        this.ui.setButtonStatus(btn, 'completed', this.ui.lang.completed);
+                        if (this.storage.saveHistoryFlag && !is_exist) {
+                            await Promise.all(fetchSizePromises);
+                            let sizeStr = totalBytes > 0 ? (totalBytes / (1024 * 1024)).toFixed(2) + ' MB' : 'Unknown';
+
+                            await this.storage.addHistory({
+                                id: status_id,
+                                user: info['user-name'],
+                                type: medias.length > 1 ? 'Gallery' : info['file-type'],
+                                postTime: new Date(tweet.legacy.created_at).getTime(),
+                                thumb: medias[0]?.media_url_https ? medias[0].media_url_https + ':small' : '',
+                                size: sizeStr
+                            });
+                            this.ui.updateHistoryCount();
                         }
                     },
-                    onerror: () => { tasksLeft = -1; this.ui.setButtonStatus(btn, 'failed', 'ERROR'); }
+                    // 图标由队列状态驱动：done 交给 onload 做多图聚合判定，failed 直接置失败，其余一律加载中
+                    onState: state => {
+                        if (state === 'done') return;
+                        if (state === 'failed') {
+                            this.ui.setButtonStatus(btn, 'failed', 'ERROR');
+                            return;
+                        }
+                        this.ui.setButtonStatus(btn, 'loading', this.ui.lang.loading);
+                    }
                 });
             });
         } else {
